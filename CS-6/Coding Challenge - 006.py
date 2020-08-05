@@ -1,5 +1,5 @@
 #Most Water
-def maxW(arr,n) : 
+def mostW(arr,n) : 
     arr=list(map(int,arr)) 
     res = 0;  
     for i in range(1, n - 1) :    
@@ -18,6 +18,6 @@ while True:
     resList.append(response)
     if response.lower()=="ok": 
         resList.pop()  
-        result=maxW(resList,len(resList))
+        result=mostW(resList,len(resList))
         print(result)
         break
