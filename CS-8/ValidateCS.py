@@ -12,18 +12,24 @@ birth_years = [1984, 1994, 2001]
 while True:
     try:
         name=input('Please enter your name : ').title()
-        if name in names: 
+        if name in names:    
+            user_id=names.index(name)
             surname=input('Please enter your surname : ').title()
-        if surname in surnames:
-            b_date=input('Please enter your birthday (MM/DD/YYYY) ')
-            b_month,b_day,b_year=b_date.split('/')
-            if len(b_month+b_day+b_year) == 8:
-                if (int(b_month) in birth_months) and  (int(b_day) in birth_days) and (int(b_year) in birth_years):
-                    print('You are a customer!')
-                    break
+            info=surnames[user_id],birth_months[user_id],birth_days[user_id],birth_years[user_id]
+            if surname in info:
+                u_date=input('Please enter your birthday (MM/DD/YYYY) ')
+                u_month,u_day,u_year=u_date.split('/')
+                if len(u_month+u_day+u_year) == 8:
+                    if int(u_month) in info  and int(u_day) in info and int(u_year) in info:
+                        print('You are a costumer')
+                        break
+                    else:    
+                        print('You are not a costumer')
+                else:
+                    print('You have entered an incorrect value!')  
             else:
-                print('You have entered an incorrect value!')
-        else:        
-            print('You are not a customer ')
+                print('You are not a costumer')              
+        else:
+             print('You are not a costumer')
     except:
-        print('You have entered an incorrect value!')
+        print('You have entered an incorrect value!') 
