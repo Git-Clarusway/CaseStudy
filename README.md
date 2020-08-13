@@ -9,4 +9,4 @@ List of coding challenges within Python workshop as follows;
 
 - [CS - 007 : Calculate Stock Profit ](./CS-7/README.md)
 
-- [CS - 008 : Validate Customers with Security Questions ](.CS-8/README.md)
+- [CS - 008 : Validate Customers with Security Questions ](./CS-8/README.md)
